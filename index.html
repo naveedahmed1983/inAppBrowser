@@ -12,7 +12,7 @@
     // device APIs are available
     //
     function onDeviceReady() {
-        var ref = window.open('http://itsandpm.com/un', '_blank', 'location=yes');
+        var ref = window.open('http://itsandpm.com/un', '_blank', 'location=no');
 		var myCallback = function() { alert(event.url); }
 		ref.addEventListener('loadstart', myCallback);
 		ref.removeEventListener('loadstart', myCallback);
