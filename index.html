@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>InAppBrowser.addEventListener Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        var ref = window.open('http://itsandpm.com/un', '_blank', 'location=yes');
+		var myCallback = function() { alert(event.url); }
+		ref.addEventListener('loadstart', myCallback);
+		ref.removeEventListener('loadstart', myCallback);
+    }
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
